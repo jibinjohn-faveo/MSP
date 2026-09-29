@@ -1,0 +1,6 @@
+{
+  "name": "Faveo RMM Software for MSPs",
+  "description": "Centralize your IT infrastructure with Faveo RMM Software. Remote monitoring, patch management, automated script execution, and endpoint support for MSPs and IT teams.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
