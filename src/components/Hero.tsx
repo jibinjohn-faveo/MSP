@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldCheck, CheckCircle2, ArrowRight, Lock, Check, Sparkles, Building, User, Mail, Phone, ExternalLink } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Check, Building, User, Mail, Phone } from 'lucide-react';
 import { ORIGINAL_CONTENT } from '../data/content';
 
 interface HeroProps {
@@ -17,7 +17,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrial, onOpenDemo, onExploreFu
     companyName: ''
   });
 
-  const [formIntent, setFormIntent] = useState<'trial' | 'demo'>('trial');
+  const [deploymentType, setDeploymentType] = useState<'cloud' | 'on-premise'>('cloud');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -58,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrial, onOpenDemo, onExploreFu
 
             {/* Main Hero Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold text-slate-900 tracking-tight leading-[1.14] [text-wrap:balance]">
-              {ORIGINAL_CONTENT.hero.headline}
+              <span className="text-[#00a6f4]">AI-Powered RMM</span> Software to Centralize Your IT Infrastructure
             </h1>
 
             {/* Subheadline exactly from original content */}
@@ -66,61 +66,26 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrial, onOpenDemo, onExploreFu
               {ORIGINAL_CONTENT.hero.subheadline}
             </p>
 
-            {/* Core Value Checklist matching enterprise MSP requirements */}
+            {/* Core Value Checklist: 3 points highlighting AI-Powered RMM software */}
             <div className="pt-2 space-y-3">
               <div className="flex items-center gap-3 text-slate-700 font-medium text-sm sm:text-base">
                 <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
                   <Check className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
-                <span>Universal lightweight agent for Windows, macOS, and Linux</span>
+                <span>AI-Powered RMM software for proactive monitoring, intelligent health alerts, and multi-tenant tracking</span>
               </div>
               <div className="flex items-center gap-3 text-slate-700 font-medium text-sm sm:text-base">
                 <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
                   <Check className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
-                <span>Automated background patch distribution and remote script execution</span>
+                <span>IT Asset Management and Easy Agent Deployment</span>
               </div>
               <div className="flex items-center gap-3 text-slate-700 font-medium text-sm sm:text-base">
                 <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
                   <Check className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
-                <span>One-click remote reboot, software uninstall, and silent troubleshooting</span>
+                <span>One-click remote reboot, silent troubleshooting, and background script execution</span>
               </div>
-              <div className="flex items-center gap-3 text-slate-700 font-medium text-sm sm:text-base">
-                <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                  <Check className="w-3.5 h-3.5 stroke-[3]" />
-                </div>
-                <span>Integrated multi-tenant IT asset tracking and health alerts</span>
-              </div>
-            </div>
-
-            {/* Reassurance text line */}
-            <div className="pt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate-500 font-medium">
-              <div className="flex items-center gap-1.5 text-slate-700">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>14 days free trial</span>
-              </div>
-              <span className="text-slate-300" aria-hidden="true">·</span>
-              <div className="flex items-center gap-1.5 text-slate-700">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>No Credit card Required</span>
-              </div>
-              <span className="text-slate-300" aria-hidden="true">·</span>
-              <div className="flex items-center gap-1.5 text-slate-700">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Setup in minutes</span>
-              </div>
-            </div>
-
-            {/* Quick Sizing Assessment Link */}
-            <div className="pt-2">
-              <button
-                onClick={onExploreFunnel}
-                className="text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1.5 cursor-pointer underline underline-offset-4"
-              >
-                <span>Calculate Your MSP Endpoints ROI & Sizing</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
             </div>
 
           </div>
@@ -128,12 +93,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrial, onOpenDemo, onExploreFu
           {/* Right Column: High-Converting Banner Form (Name, Email, Phone, Company) */}
           <div className="lg:col-span-5">
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-sky-200/90 shadow-2xl shadow-sky-100/60 relative">
-              
-              {/* Decorative top ribbon badge */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-sky-50 text-sky-700 rounded-full text-xs font-bold border border-sky-200 mb-4">
-                <Sparkles className="w-3.5 h-3.5 text-sky-600" />
-                <span>Free 14-Day Full Access</span>
-              </div>
 
               {/* Form Heading */}
               <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
@@ -143,29 +102,29 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrial, onOpenDemo, onExploreFu
                 Centralize your IT infrastructure, deploy updates, and fix systems remotely.
               </p>
 
-              {/* Intent Toggle: Free Trial vs Live Demo */}
+              {/* Deployment Toggle: Cloud vs On-premise */}
               <div className="mt-4 grid grid-cols-2 p-1 bg-slate-100 rounded-xl text-xs font-semibold">
                 <button
                   type="button"
-                  onClick={() => setFormIntent('trial')}
+                  onClick={() => setDeploymentType('cloud')}
                   className={`py-2 rounded-lg transition-all cursor-pointer ${
-                    formIntent === 'trial'
+                    deploymentType === 'cloud'
                       ? 'bg-white text-slate-900 shadow-xs'
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
-                  Start Free Trial
+                  Cloud
                 </button>
                 <button
                   type="button"
-                  onClick={() => setFormIntent('demo')}
+                  onClick={() => setDeploymentType('on-premise')}
                   className={`py-2 rounded-lg transition-all cursor-pointer ${
-                    formIntent === 'demo'
+                    deploymentType === 'on-premise'
                       ? 'bg-white text-slate-900 shadow-xs'
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
-                  Book Live Demo
+                  On-premise
                 </button>
               </div>
 
@@ -263,19 +222,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrial, onOpenDemo, onExploreFu
                         <span>Setting up your environment...</span>
                       ) : (
                         <>
-                          <span>
-                            {formIntent === 'trial' ? 'Start Free 14-Day Trial' : 'Schedule 1-on-1 Demo'}
-                          </span>
+                          <span>Start Free Trial</span>
                           <ArrowRight className="w-4 h-4" />
                         </>
                       )}
                     </button>
-                  </div>
-
-                  {/* Security Assurance */}
-                  <div className="pt-2 flex items-center justify-center gap-1.5 text-xs text-slate-500 text-center">
-                    <Lock className="w-3.5 h-3.5 text-emerald-600" />
-                    <span>Your information is 100% secure. No credit card required.</span>
                   </div>
 
                 </form>

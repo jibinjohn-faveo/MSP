@@ -12,8 +12,8 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenTrial, onOpenDemo 
     <section className="py-20 bg-gradient-to-b from-white to-slate-100 border-b border-slate-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
-        <div className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">
-          Get Started Today
+        <div className="text-xs font-semibold uppercase tracking-wider text-sky-600 mb-2">
+          AI-Powered IT Automation
         </div>
 
         <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight [text-wrap:balance]">
@@ -44,15 +44,11 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenTrial, onOpenDemo 
         </div>
 
         {/* Trust Badges - Zero-pill typography */}
+        {/* Trust Badges */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-600 font-medium">
           <div className="flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-            <span>14 days free trial</span>
-          </div>
-          <span className="text-slate-300" aria-hidden="true">·</span>
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-            <span>No Credit card Required</span>
+            <span>Available as Cloud SaaS or On-Premise</span>
           </div>
           <span className="text-slate-300" aria-hidden="true">·</span>
           <div className="flex items-center gap-1.5">

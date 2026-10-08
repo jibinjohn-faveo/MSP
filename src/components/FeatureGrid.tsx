@@ -9,7 +9,6 @@ import {
   GitFork, 
   Move, 
   Laptop,
-  ArrowRight,
   Sparkles
 } from 'lucide-react';
 import { ORIGINAL_CONTENT } from '../data/content';
@@ -23,65 +22,38 @@ export const FeatureGrid: React.FC<FeatureGridProps> = ({ onOpenTrial, onOpenDem
   // Enhanced metadata tags for each card (keeping original descriptions untouched)
   const featureMeta = [
     {
-      os: 'Multi-OS Telemetry',
-      badge: 'Real-time Metrics',
-      tag: 'Monitoring',
       accent: 'from-sky-500 to-blue-600',
       icon: <Monitor className="w-6 h-6 text-white stroke-[2]" />
     },
     {
-      os: 'PowerShell / Bash',
-      badge: 'Zero-touch Execution',
-      tag: 'Automation',
       accent: 'from-blue-600 to-indigo-600',
       icon: <Terminal className="w-6 h-6 text-white stroke-[2]" />
     },
     {
-      os: 'Windows · Mac · Linux',
-      badge: '< 20MB Footprint',
-      tag: 'Management',
       accent: 'from-cyan-500 to-sky-600',
       icon: <UserCheck className="w-6 h-6 text-white stroke-[2]" />
     },
     {
-      os: 'System Background',
-      badge: 'Silent Diagnostics',
-      tag: 'Automation',
       accent: 'from-sky-600 to-blue-700',
       icon: <Settings className="w-6 h-6 text-white stroke-[2]" />
     },
     {
-      os: 'Policy Compliance',
-      badge: 'Dynamic Thresholds',
-      tag: 'Monitoring',
       accent: 'from-emerald-500 to-teal-600',
       icon: <HeartPulse className="w-6 h-6 text-white stroke-[2]" />
     },
     {
-      os: 'Instant Remote',
-      badge: 'Zero User Disruption',
-      tag: 'Management',
       accent: 'from-amber-500 to-orange-600',
       icon: <Wand2 className="w-6 h-6 text-white stroke-[2]" />
     },
     {
-      os: 'OS & 3rd-party Apps',
-      badge: 'Automated Rollouts',
-      tag: 'Security',
       accent: 'from-blue-600 to-sky-500',
       icon: <GitFork className="w-6 h-6 text-white stroke-[2]" />
     },
     {
-      os: 'Granular RBAC',
-      badge: 'Technician Scopes',
-      tag: 'Security',
       accent: 'from-indigo-500 to-sky-600',
       icon: <Move className="w-6 h-6 text-white stroke-[2]" />
     },
     {
-      os: 'Hardware & Software',
-      badge: 'Single Inventory',
-      tag: 'Management',
       accent: 'from-sky-500 to-cyan-600',
       icon: <Laptop className="w-6 h-6 text-white stroke-[2]" />
     }
@@ -103,7 +75,7 @@ export const FeatureGrid: React.FC<FeatureGridProps> = ({ onOpenTrial, onOpenDem
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-slate-900 tracking-tight leading-tight">
-            Explore the Features and Solutions of Our RMM Software
+            Explore the Features and Solutions of our AI-Powered RMM Software
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-normal">
@@ -153,23 +125,6 @@ export const FeatureGrid: React.FC<FeatureGridProps> = ({ onOpenTrial, onOpenDem
                     {feat.description}
                   </p>
                 </div>
-
-                {/* Footer metadata & interactive link */}
-                <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span className="font-semibold text-slate-500 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                    {meta.os}
-                  </span>
-
-                  <button
-                    onClick={onOpenTrial}
-                    className="text-sky-600 font-bold hover:text-sky-700 flex items-center gap-1 group/btn cursor-pointer transition-colors"
-                  >
-                    <span>Try now</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-
               </div>
             );
           })}

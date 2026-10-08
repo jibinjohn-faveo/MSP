@@ -21,7 +21,7 @@ export interface PlatformPillar {
 export const ORIGINAL_CONTENT = {
   hero: {
     kicker: "RMM for MSPs",
-    headline: "RMM Software to Centralize Your IT Infrastructure",
+    headline: "AI-Powered RMM Software to Centralize Your IT Infrastructure",
     subheadline: "Best MSP Software for IT Teams to monitor assets, apply patches, and troubleshoot remotely from anywhere.",
     primaryCta: "Request a Demo",
     secondaryCta: "Start Free Trial",
@@ -115,55 +115,55 @@ export const ORIGINAL_CONTENT = {
     {
       id: "real-time-monitoring",
       title: "Real-Time Device Monitoring",
-      description: "Monitor health and performance of all connected devices. Get instant visibility into system metrics like CPU, memory, and disk usage—helping your team act before issues become problems.",
+      description: "Track CPU, memory, and disk health across all devices in real time so you can catch issues before users notice.",
       category: "Monitoring"
     },
     {
       id: "remote-script-execution",
       title: "Remote Script Execution",
-      description: "Save time with automation. Upload and execute custom scripts across multiple systems remotely to deploy updates, apply patches, or fix issues, without needing to be physically present.",
+      description: "Run custom PowerShell or Bash scripts on multiple computers at once to deploy updates and fixes without leaving your desk.",
       category: "Automation"
     },
     {
       id: "easy-agent-deployment",
       title: "Easy Agent Deployment",
-      description: "Deploy lightweight Agent Software across Windows, macOS, or Linux in minutes. Once installed, every device becomes manageable via Faveo’s Remote Monitoring and Management software.",
+      description: "Install a fast, lightweight agent on Windows, Mac, or Linux in minutes to bring any device online instantly.",
       category: "Management"
     },
     {
       id: "command-control-access",
       title: "Command & Control Access",
-      description: "Take full control of devices from anywhere. Send real-time commands to restart services, check logs, or carry out system tasks, enabling faster resolution and less downtime.",
+      description: "Restart services, review system logs, and run terminal commands remotely to fix computers fast.",
       category: "Automation"
     },
     {
       id: "automated-health-checks",
       title: "Automated Health Checks",
-      description: "Set up smart checks to monitor specific system conditions such as low disk space or software version mismatches. Ensure systems stay compliant with your IT policies automatically.",
+      description: "Set smart alerts for low disk space, outdated software, or failing services so your systems stay healthy and compliant.",
       category: "Monitoring"
     },
     {
       id: "one-click-remote-actions",
       title: "One-Click Remote Actions",
-      description: "Perform vital system tasks—like shutdown, reboot, or uninstall with just one click, right from your dashboard. Whether you need to restart a machine, power off a device that’s no longer in use, or uninstall the agent software, everything can be done instantly and securely.",
+      description: "Reboot machines, power down inactive devices, or uninstall apps with a single click from your browser.",
       category: "Management"
     },
     {
       id: "patch-management-system",
       title: "Patch Management System",
-      description: "Automatically apply critical updates to keep your systems secure, up to date, and compliant—ensuring smooth performance and protection. It’s all handled seamlessly in the background.",
+      description: "Push critical Windows and app security updates silently in the background without interrupting client work.",
       category: "Security"
     },
     {
       id: "role-base-access",
       title: "Role Base Access",
-      description: "Ensure full control over who can access or perform key operations within your RMM tool. Only admins or authorized agents can execute sensitive actions like running scripts, pushing updates, or uninstalling software.",
+      description: "Assign precise permissions so only authorized technicians can run scripts, deploy patches, or change settings.",
       category: "Security"
     },
     {
       id: "it-asset-management",
       title: "IT Asset Management",
-      description: "Easily manage all your IT assets from one centralized dashboard. Displays key information like operating system details, hardware specs, and usage metrics. This makes it simple to monitor and organize your assets, reduce downtime, and make better decisions about maintenance and upgrades.",
+      description: "See hardware specs, OS versions, and software inventory in one clean dashboard to plan upgrades easily.",
       category: "Management"
     }
   ] as FeatureItem[],
@@ -227,13 +227,12 @@ export const ORIGINAL_CONTENT = {
   ] as FAQItem[],
 
   socialProof: {
-    title: "See Why 5000+ Businesses Trust Faveo",
+    title: "See Why 10,000+ Businesses Trust Faveo",
     subtitle: "Learn How Faveo Service Desk Can Make Your Customer Happy",
     stats: [
-      { value: "5,000+", label: "Businesses Trust Faveo Globally" },
+      { value: "10,000+", label: "Businesses Trust Faveo Globally" },
       { value: "99.98%", label: "Average Infrastructure Uptime" },
-      { value: "70%", label: "Faster Average Time to Resolution" },
-      { value: "50+", label: "Supported Languages & Locales" }
+      { value: "70%", label: "Faster Average Time to Resolution" }
     ]
   },
 

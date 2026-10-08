@@ -27,7 +27,7 @@ export const TrustBannerCTA: React.FC<TrustBannerCTAProps> = ({ onSignUp }) => {
         
         {/* Main Heading from Screenshot 10 */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight [text-wrap:balance]">
-          See Why 5000+ Businesses Trust Faveo
+          See Why 10,000+ Businesses Trust Faveo
         </h2>
 
         {/* 2-line Subheading from Screenshot 10 */}

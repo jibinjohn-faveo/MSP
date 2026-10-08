@@ -63,10 +63,6 @@ export const TrialModal: React.FC<TrialModalProps> = ({
                 Start Your Free Faveo Trial
               </h3>
               <div className="mt-2 flex items-center justify-center gap-3 text-xs text-slate-500 font-medium">
-                <span>14 days free trial</span>
-                <span aria-hidden="true">·</span>
-                <span>No Credit card Required</span>
-                <span aria-hidden="true">·</span>
                 <span>Setup in minutes</span>
               </div>
             </div>
