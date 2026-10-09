@@ -141,32 +141,51 @@ export const TrialModal: React.FC<TrialModalProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">
+                <label className="block text-xs font-semibold text-slate-700 uppercase mb-2">
                   Deployment Preference
                 </label>
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <button
-                    type="button"
-                    onClick={() => setDeploymentType('cloud')}
-                    className={`py-2 px-3 rounded-lg border font-medium transition-colors cursor-pointer ${
+                <div className="grid grid-cols-2 gap-2.5 text-xs">
+                  <label
+                    className={`flex items-center gap-2 p-2.5 rounded-xl border cursor-pointer transition-all ${
                       deploymentType === 'cloud'
-                        ? 'bg-blue-50 border-blue-600 text-blue-700 font-semibold'
+                        ? 'bg-blue-50/70 border-blue-600 text-blue-900 font-semibold ring-1 ring-blue-600/20'
                         : 'border-slate-200 text-slate-600 hover:bg-slate-50'
                     }`}
                   >
-                    Faveo Cloud (SaaS)
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setDeploymentType('self-hosted')}
-                    className={`py-2 px-3 rounded-lg border font-medium transition-colors cursor-pointer ${
+                    <input
+                      type="radio"
+                      name="modalDeploymentType"
+                      value="cloud"
+                      checked={deploymentType === 'cloud'}
+                      onChange={() => setDeploymentType('cloud')}
+                      className="w-4 h-4 text-blue-600 accent-blue-600 cursor-pointer"
+                    />
+                    <div className="flex flex-col">
+                      <span className="font-semibold text-slate-900 leading-tight">Faveo Cloud</span>
+                      <span className="text-[10px] text-slate-500 font-normal leading-tight">Managed SaaS</span>
+                    </div>
+                  </label>
+
+                  <label
+                    className={`flex items-center gap-2 p-2.5 rounded-xl border cursor-pointer transition-all ${
                       deploymentType === 'self-hosted'
-                        ? 'bg-blue-50 border-blue-600 text-blue-700 font-semibold'
+                        ? 'bg-blue-50/70 border-blue-600 text-blue-900 font-semibold ring-1 ring-blue-600/20'
                         : 'border-slate-200 text-slate-600 hover:bg-slate-50'
                     }`}
                   >
-                    Self-Hosted (On-Prem)
-                  </button>
+                    <input
+                      type="radio"
+                      name="modalDeploymentType"
+                      value="self-hosted"
+                      checked={deploymentType === 'self-hosted'}
+                      onChange={() => setDeploymentType('self-hosted')}
+                      className="w-4 h-4 text-blue-600 accent-blue-600 cursor-pointer"
+                    />
+                    <div className="flex flex-col">
+                      <span className="font-semibold text-slate-900 leading-tight">On-Premise</span>
+                      <span className="text-[10px] text-slate-500 font-normal leading-tight">Self-Hosted</span>
+                    </div>
+                  </label>
                 </div>
               </div>
 

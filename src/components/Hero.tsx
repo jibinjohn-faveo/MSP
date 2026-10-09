@@ -98,34 +98,55 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrial, onOpenDemo, onExploreFu
               <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
                 Get Started with Faveo RMM
               </h2>
-              <p className="mt-1 text-sm text-slate-600">
-                Centralize your IT infrastructure, deploy updates, and fix systems remotely.
-              </p>
 
-              {/* Deployment Toggle: Cloud vs On-premise */}
-              <div className="mt-4 grid grid-cols-2 p-1 bg-slate-100 rounded-xl text-xs font-semibold">
-                <button
-                  type="button"
-                  onClick={() => setDeploymentType('cloud')}
-                  className={`py-2 rounded-lg transition-all cursor-pointer ${
-                    deploymentType === 'cloud'
-                      ? 'bg-white text-slate-900 shadow-xs'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                >
-                  Cloud
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setDeploymentType('on-premise')}
-                  className={`py-2 rounded-lg transition-all cursor-pointer ${
-                    deploymentType === 'on-premise'
-                      ? 'bg-white text-slate-900 shadow-xs'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                >
-                  On-premise
-                </button>
+              {/* Deployment Preference Radio Buttons */}
+              <div className="mt-5 p-3.5 bg-slate-50/80 rounded-2xl border border-slate-200/90">
+                <span className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2.5">
+                  Choose Deployment Type:
+                </span>
+                <div className="grid grid-cols-2 gap-3">
+                  <label
+                    className={`flex items-center gap-2.5 p-2.5 rounded-xl border cursor-pointer transition-all ${
+                      deploymentType === 'cloud'
+                        ? 'bg-white border-[#00a6f4] shadow-xs text-slate-900 font-semibold ring-1 ring-[#00a6f4]/20'
+                        : 'bg-white/60 border-slate-200 text-slate-600 hover:bg-white'
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="heroDeploymentType"
+                      value="cloud"
+                      checked={deploymentType === 'cloud'}
+                      onChange={() => setDeploymentType('cloud')}
+                      className="w-4 h-4 text-[#00a6f4] accent-[#00a6f4] cursor-pointer"
+                    />
+                    <div className="flex flex-col">
+                      <span className="text-xs font-bold text-slate-900 leading-tight">Cloud</span>
+                      <span className="text-[10px] text-slate-500 font-normal leading-tight">Hosted SaaS</span>
+                    </div>
+                  </label>
+
+                  <label
+                    className={`flex items-center gap-2.5 p-2.5 rounded-xl border cursor-pointer transition-all ${
+                      deploymentType === 'on-premise'
+                        ? 'bg-white border-[#00a6f4] shadow-xs text-slate-900 font-semibold ring-1 ring-[#00a6f4]/20'
+                        : 'bg-white/60 border-slate-200 text-slate-600 hover:bg-white'
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="heroDeploymentType"
+                      value="on-premise"
+                      checked={deploymentType === 'on-premise'}
+                      onChange={() => setDeploymentType('on-premise')}
+                      className="w-4 h-4 text-[#00a6f4] accent-[#00a6f4] cursor-pointer"
+                    />
+                    <div className="flex flex-col">
+                      <span className="text-xs font-bold text-slate-900 leading-tight">On-Premise</span>
+                      <span className="text-[10px] text-slate-500 font-normal leading-tight">Self-Hosted Server</span>
+                    </div>
+                  </label>
+                </div>
               </div>
 
               {!isSubmitted ? (
